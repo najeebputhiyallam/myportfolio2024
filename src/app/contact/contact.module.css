@@ -1,0 +1,17 @@
+.containerWrapper {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 20px;
+}
+
+.formDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

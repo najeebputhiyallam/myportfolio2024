@@ -1,0 +1,90 @@
+:root {
+    --bg: #483d8b;
+    --text: azure; 
+    --btnColor: gold;
+    --btnColorHover: goldenrod;
+    --linkHoverColor: aqua;
+
+    --maxContentWidth: 1400px;
+    
+    --gradientStart: #00FF00;
+    --gradientEnd: #00FFFF;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { margin: 0; padding: 0; background-color: var(--bg); color: var(--text); }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+    a:hover {
+        color: var(--linkHoverColor);
+    }
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0 none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: var(--btnColor);
+    color: var(--bg);
+    cursor: pointer;
+    min-width: 150px;
+}
+button:hover {
+    background-color: var(--btnColorHover);
+}
+
+input, textarea {
+    font-family: inherit;
+    height: 40px;
+    border-radius: 8px;
+    border: 0 none;
+    padding: 5px 10px;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+.containerGlobal {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;    
+}
+
+.containerExtendGlobal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 100%;    
+}
+
+.containerWrapperGlobal {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: var(--maxContentWidth);
+}
+
+.gradientText {
+    background: var(--gradientStart);
+    background: -webkit-linear-gradient(to left, var(--gradientStart) 0%, var(--gradientEnd) 100%);
+    background: -moz-linear-gradient(to left, var(--gradientStart) 0%, var(--gradientEnd) 100%);
+    background: linear-gradient(to left, var(--gradientStart) 0%, var(--gradientEnd) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;   
+}
