@@ -18,7 +18,7 @@ export default function ContactPage(){
 
         const { name, email, message } = Object.fromEntries(formData);
         //await sql`INSERT INTO contact (Name, Email, Message) VALUES (${nameValue}, ${emailValue}, ${messageValue});`;
-        await sql`INSERT INTO contact (Name, Email, Message) VALUES (${name}, ${email}, ${message});`;
+        await sql`INSERT INTO contact (Name, Email, Message) VALUES (${name?.toString()}, ${email?.toString()}, ${message?.toString()});`;
     }
 
     return(
