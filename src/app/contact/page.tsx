@@ -1,5 +1,4 @@
 import { sql } from '@vercel/postgres';
-import { NextResponse } from 'next/server';
 import { Metadata } from "next";
 import styles from '../contact/contact.module.css'
 
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage(){
 
-    const submitForm = async (formData) => {
+    const submitForm = async (formData: { name: string, email: string, message: string }) => {
         "use server";
         //console.log(formData.get('name'));
         const nameValue = formData.get('name');

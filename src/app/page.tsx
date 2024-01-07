@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import { useRouter } from 'next/navigation'
 import HireMeBtn from '@/components/hiremeBtn/HiremeBtn'
 
 export default function Home() {
