@@ -12,10 +12,13 @@ export default function ContactPage(){
     const submitForm = async (formData) => {
         "use server";
         //console.log(formData.get('name'));
-        const nameValue = formData.get('name');
-        const emailValue = formData.get('email');
-        const messageValue = formData.get('message');
-        await sql`INSERT INTO contact (Name, Email, Message) VALUES (${nameValue}, ${emailValue}, ${messageValue});`;
+        //const nameValue = formData.get('name');
+        //const emailValue = formData.get('email');
+        //const messageValue = formData.get('message');
+
+        const { name, email, message } = Object.fromEntries(formData);
+        //await sql`INSERT INTO contact (Name, Email, Message) VALUES (${nameValue}, ${emailValue}, ${messageValue});`;
+        await sql`INSERT INTO contact (Name, Email, Message) VALUES (${name}, ${email}, ${message});`;
     }
 
     return(
@@ -27,17 +30,17 @@ export default function ContactPage(){
 
                     <div className={styles.formDiv}>
                         <label htmlFor="name" >Name</label>
-                        <input type="text" name="name" placeholder="Your name" />
+                        <input type="text" name="name" placeholder="Your name" required />
                     </div>
 
                     <div className={styles.formDiv}>
                         <label htmlFor="email" >Email</label>
-                        <input type="text" name="email" placeholder="youremail@mail.com" />
+                        <input type="text" name="email" placeholder="youremail@mail.com" required />
                     </div>
 
                     <div className={styles.formDiv}>
                         <label htmlFor="message" >Message</label>
-                        <textarea name="message" placeholder="Write your message" ></textarea>
+                        <textarea name="message" placeholder="Write your message" required ></textarea>
                     </div>      
 
                     <div className={styles.formDiv}>
