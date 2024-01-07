@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import styles from '../contact/contact.module.css'
 
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Contact",
 }
 
