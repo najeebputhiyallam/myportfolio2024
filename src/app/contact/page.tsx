@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage(){
 
-    const submitForm = async (formData) => {
+    const submitForm = async (formData: FormData) => {
         "use server";
         //console.log(formData.get('name'));
         //const nameValue = formData.get('name');
@@ -35,7 +35,7 @@ export default function ContactPage(){
 
                     <div className={styles.formDiv}>
                         <label htmlFor="email" >Email</label>
-                        <input type="text" name="email" placeholder="youremail@mail.com" required />
+                        <input type="email" name="email" placeholder="youremail@mail.com" required />
                     </div>
 
                     <div className={styles.formDiv}>
