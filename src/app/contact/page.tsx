@@ -22,6 +22,8 @@ export default function ContactPage(){
     }
 
     return(
+        <div className="containerGlobal" > 
+        <div className="containerWrapperGlobal" >
 
         <form className={styles.form} action={submitForm} >
             <div className="containerGlobal" > 
@@ -49,6 +51,9 @@ export default function ContactPage(){
 
                 </div>
             </div>
-        </form>    
+        </form>   
+        
+        </div>
+        </div>
     );
 }
