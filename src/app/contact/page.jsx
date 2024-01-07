@@ -3,13 +3,13 @@ import { Metadata } from "next";
 import styles from '../contact/contact.module.css'
 
 
-export const metadata: Metadata = {
+export const metadata = {
     title: "Contact",
 }
 
 export default function ContactPage(){
 
-    const submitForm = async (formData: { name: string, email: string, message: string }) => {
+    const submitForm = async (formData) => {
         "use server";
         //console.log(formData.get('name'));
         const nameValue = formData.get('name');
