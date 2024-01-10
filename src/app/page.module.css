@@ -45,6 +45,11 @@
         opacity: 0.6;
     }
 
+    .heroImg img {
+        height: auto !important;
+        top: auto !important;
+    }
+
     .heroTxt {
         z-index: 2;
     }
