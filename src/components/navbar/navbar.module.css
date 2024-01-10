@@ -65,6 +65,7 @@
 
      .mobileNav {
         display: flex;
+        display: none;
      }
 
      .mobileDrawer {

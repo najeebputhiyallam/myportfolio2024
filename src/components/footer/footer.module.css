@@ -6,3 +6,16 @@
 .containerWrapper div:first-child { text-align: left; }
 
 .containerWrapper div:last-child { text-align: right; }
+
+
+@media (max-width: 640px){
+    .containerWrapper {
+        font-size: .8rem;
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 10px; 
+    }
+    .containerWrapper div { text-align: center !important; }
+
+    .containerGlobal { padding: 0; }
+}    

@@ -3,7 +3,7 @@ import styles from './footer.module.css'
 
 export default function Footer(){    
     return(
-        <div className="containerGlobal" >  
+        <div className={`${styles.containerGlobal} containerGlobal`} >  
             <div className={`${styles.containerWrapper} containerWrapperGlobal`} >
                 <div><Link href="/" >&copy; Najeeb Puthiyapattillath</Link></div>
                 <div>Powered by <Link href="https://nextjs.org/" target='_blank' >Next.js</Link></div>
