@@ -21,7 +21,7 @@ export default function Home() {
           </div>
 
           <div className={styles.heroImg}>
-            <Image src="/animation-1704197158711_4f154d83.gif"  alt="logo" fill style={{objectFit: "contain", borderRadius: "0" }} />
+            <Image src="/animation-1704197158711_4f154d83.gif" priority={true} alt="logo" fill style={{objectFit: "contain", borderRadius: "0" }} />
           </div>
         </div>
       </div>  
