@@ -46,14 +46,19 @@ export default function Links(){
             </div>
 
             <div className={styles.mobileNav}>
-                <div className={styles.mobileBtn} onClick={() => setNavbarOpen(prevState => !prevState)} >CLICK HERE</div>
-                { navbarOpen ? (
-                                    <div className={styles.mobileDrawer}>
-                                    {links.map((link=>(
-                                        <Link href={link.path} key={link.title}>{link.title}</Link>
-                                    ))
-                                    )}
-                                    </div>  
+                 { navbarOpen ? (
+                    <div className={styles.mobileBtn} onClick={() => setNavbarOpen(prevState => !prevState)} >X</div>
+                 ) : (
+                    <div className={styles.mobileBtn} onClick={() => setNavbarOpen(prevState => !prevState)} >MENU</div>       
+                 )}   
+                
+                { navbarOpen ? (                                    
+                    <div className={styles.mobileDrawer}>
+                    {links.map((link=>(
+                        <Link href={link.path} key={link.title}>{link.title}</Link>
+                    ))
+                    )}
+                    </div>  
                 ) : (
                     undefined
                 ) }
