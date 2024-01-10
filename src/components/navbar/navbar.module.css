@@ -50,6 +50,10 @@
     .mobileNav {
         display: none;
     }
+
+    .mobileBtn {
+        display: none;
+    }
 }
 
 
@@ -65,7 +69,6 @@
 
      .mobileNav {
         display: flex;
-        display: none;
      }
 
      .mobileDrawer {
@@ -90,5 +93,11 @@
      }
      .mobileDrawer a:first-child {
         border: 0 none;
+     }
+
+     .mobileBtn {
+        display: block;
+        z-index: 11;
+        cursor: pointer;
      }
 }

@@ -2,8 +2,12 @@
 
 import Link from "next/link";
 import styles from '../navbar.module.css'
+import { useState } from "react";
 
 export default function Links(){
+
+    const [navbarOpen, setNavbarOpen ] = useState(false);
+    
 
     const links = [
         {
@@ -42,13 +46,18 @@ export default function Links(){
             </div>
 
             <div className={styles.mobileNav}>
-                <div className={styles.mobileBtn} >CLICK HERE</div>
-                <div className={styles.mobileDrawer}>
-                    {links.map((link=>(
-                        <Link href={link.path} key={link.title}>{link.title}</Link>
-                    ))
-                    )}
-                </div>    
+                <div className={styles.mobileBtn} onClick={() => setNavbarOpen(prevState => !prevState)} >CLICK HERE</div>
+                { navbarOpen ? (
+                                    <div className={styles.mobileDrawer}>
+                                    {links.map((link=>(
+                                        <Link href={link.path} key={link.title}>{link.title}</Link>
+                                    ))
+                                    )}
+                                    </div>  
+                ) : (
+                    undefined
+                ) }
+  
             </div>            
         </div>      
     );
