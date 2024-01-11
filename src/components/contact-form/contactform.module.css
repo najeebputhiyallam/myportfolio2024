@@ -16,3 +16,9 @@
     flex-direction: column;
     gap: 5px;
 }
+
+.formDiv > button[type="button"] {
+    border: 1px solid var(--btnColor);
+    background: transparent;
+    color: var(--btnColor);
+}

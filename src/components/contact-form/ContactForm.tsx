@@ -1,14 +1,18 @@
 "use client"
 
-import React from "react";
+import React, { useState } from "react";
 import styles from './contactform.module.css';
 import { submitForm } from "@/actions/formActions";
 import { useRef } from "react";
 
 export default function ContactForm(){
     const ref = useRef<HTMLFormElement>(null);
+
+    const [submitBtn, submitBtnClicked ] = useState(false);
+
+
     return(
-        <form className={styles.form} ref={ref} action={async FormData => { await submitForm(FormData); ref.current?.reset(); }} >
+        <form className={styles.form} ref={ref} onSubmit={()=>submitBtnClicked(true)} action={async FormData => { submitBtnClicked(true); await submitForm(FormData); ref.current?.reset(); }} >
             <div className="containerGlobal" > 
                 <div className={` ${styles.containerWrapper} containerWrapperGlobal`} >
                     <h1 className="gradientText" >/ Contact</h1>
@@ -29,7 +33,11 @@ export default function ContactForm(){
                     </div>      
 
                     <div className={styles.formDiv}>
-                        <button type="submit" >Submit</button>
+                        { submitBtn ? (
+                            <button type="button" >Sending Message</button>
+                        ):(
+                            <button type="submit" >Submit</button>
+                        ) }                        
                     </div>  
 
                 </div>
