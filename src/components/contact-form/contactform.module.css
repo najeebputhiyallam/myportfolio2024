@@ -22,3 +22,5 @@
     background: transparent;
     color: var(--btnColor);
 }
+
+.formDiv label span { font-size: .6rem; font-weight: 300; letter-spacing: 1px; }

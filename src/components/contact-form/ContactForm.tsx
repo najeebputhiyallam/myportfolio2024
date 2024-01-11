@@ -19,17 +19,17 @@ export default function ContactForm(){
 
                     <div className={styles.formDiv}>
                         <label htmlFor="name" >Name</label>
-                        <input type="text" name="name" placeholder="Your name" required />
+                        <input type="text" name="name" placeholder="Your name" required maxLength={25} minLength={3} />
                     </div>
 
                     <div className={styles.formDiv}>
                         <label htmlFor="email" >Email</label>
-                        <input type="email" name="email" placeholder="youremail@mail.com" required />
+                        <input type="email" name="email" placeholder="youremail@mail.com" required maxLength={35} minLength={6} />
                     </div>
 
                     <div className={styles.formDiv}>
-                        <label htmlFor="message" >Message</label>
-                        <textarea name="message" placeholder="Write your message" required ></textarea>
+                        <label htmlFor="message" >Message <span>(maximum 200 Characters)</span></label>
+                        <textarea name="message" placeholder="Write your message" required maxLength={200} minLength={5} ></textarea>
                     </div>      
 
                     <div className={styles.formDiv}>
