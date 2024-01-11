@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer'
 
-export const sendEmailer = async () => {
+export const sendEmailer = async (name: string, email: string, message: string) => {
     
     try {
         const transporter = nodemailer.createTransport({
@@ -23,13 +23,26 @@ export const sendEmailer = async () => {
             });      
     
             const mailOption = {
-                from: '"Contact Form" <contact@najeebdigital.xyz>',
+                from: '"Najeeb Digital - Contact Form" <contact@najeebdigital.xyz>',
                 to: 'najeebputhiyallam@gmail.com',
-                subject: 'Subject 👻 Hello TESTING Subject',
-                html: '<h2>Hello Testing Message Body</h2>',
+                replyTo: email,
+                subject: `${name} submitted a message`,
+                html: message,
             }
+
+            const mailOption2 = {
+              from: '"Najeeb Digital - Contact Form" <contact@najeebdigital.xyz>',
+              to: email,
+              replyTo: '"Najeeb Digital - Contact Form" <contact@najeebdigital.xyz>',
+              subject: `Thank you for your message, ${name}`,
+              html: `<p> Your message is <br> ${message}`,
+          }            
+
+            //console.log( mailOption );
+            //https://beefree.io/ for email templates
     
             await transporter.sendMail(mailOption);
+            await transporter.sendMail(mailOption2);
             return('Send');
 
     } catch(error){

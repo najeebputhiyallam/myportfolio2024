@@ -15,7 +15,7 @@ export const submitForm = async (formData: FormData) => {
     //await sql`INSERT INTO contact (Name, Email, Message) VALUES (${nameValue}, ${emailValue}, ${messageValue});`;
     await sql`INSERT INTO contact (Name, Email, Message) VALUES (${name?.toString()}, ${email?.toString()}, ${message?.toString()});`;
 
-    await sendEmailer();
+    await sendEmailer( name.toString(), email.toString(), message.toString() );
 
     redirect('/contact/thankyou');
 }
