@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import styles from './button.module.css'
 
-export default function Button({btnType, btnText, btnLink}) {
+export default function Button({ btnType, btnText, btnLink }: { btnType: string; btnText: string; btnLink: string }) {
 
     //console.log(btnText);
     const router = useRouter();
