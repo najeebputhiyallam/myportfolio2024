@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import HireMeBtn from '@/components/hiremeBtn/HiremeBtn'
+import Button from '@/components/button/Button'
 
 export default function Home() {
   //throw new Error('Error in Home');
@@ -16,7 +16,7 @@ export default function Home() {
             <h2>Next.js Developer | Elementor Expert | Front End Developer</h2>
             
             <div className={styles.btnHolder} >
-              <HireMeBtn />
+              <Button btnType="button" btnText="Hire Me" btnLink="/contact" />
             </div>
           </div>
 

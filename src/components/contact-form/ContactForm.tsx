@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styles from './contactform.module.css';
 import { submitForm } from "@/actions/formActions";
 import { useRef } from "react";
+import Button from "../button/Button";
 
 export default function ContactForm(){
     const ref = useRef<HTMLFormElement>(null);
@@ -34,9 +35,11 @@ export default function ContactForm(){
 
                     <div className={styles.formDiv}>
                         { submitBtn ? (
-                            <button type="button" >Sending Message</button>
+                            //<button type="button" >Sending Message</button>
+                            <Button btnType="button" btnText="Sending Message" btnLink="" />
                         ):(
-                            <button type="submit" >Submit</button>
+                            //<button type="submit" >Submit</button>
+                            <Button btnType="submit" btnText="Submit" btnLink="" />
                         ) }                        
                     </div>  
 

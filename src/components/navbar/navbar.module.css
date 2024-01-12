@@ -37,6 +37,8 @@
     display: flex;
 }
 
+.linkActive { color: var(--gradientStart); }
+
 
 @media (min-width: 641px){
     .navLinks > div {
