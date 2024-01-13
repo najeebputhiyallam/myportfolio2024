@@ -19,18 +19,22 @@ export default function SkillsPage(){
                         <li>Wordpress</li>
                         <li>WooCommerce</li>
                         <li>Shopify</li>
-                        <li>Photoshop</li>
+                        
                         <li>HTML</li>
                         <li>CSS</li>
+                        <li>Photoshop</li>
                         <li>jQuery</li>
                         <li>JavaScript</li>
                         <li>SEO</li>
-                        <li>Website Optimization</li>
+                        
                         <li>PHP</li>
                         <li>MySQL</li>
-                        <li>Figma</li>
-                        <li>Domain Management</li>
+                        <li>Website Optimization</li>
+                        
+                        
                         <li>Web Design</li>
+                        <li>Domain Management</li>
+                        <li>Figma</li>
                     </ul>
                     <p>In short, I can manage the entire A to Z process of website development, including selecting the domain, choosing the best hosting provider, and ultimately launching your website.</p>
 
