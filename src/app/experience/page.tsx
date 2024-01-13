@@ -33,7 +33,7 @@ export default function ExperiencePage(){
 
                     <div className={styles.expBox}>
                         <p>
-                            Responsive Web Developer <br />
+                            Web Developer <br />
                             <span>at DM3 Agency, DIC</span>
                         </p>
 
