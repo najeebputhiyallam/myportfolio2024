@@ -1,6 +1,7 @@
 :root {
     --bg: #483d8b;
     --text: azure; 
+    --text30: #f0ffff30;
     --btnColor: gold;
     --btnColorHover: goldenrod;
     --linkHoverColor: aqua;
