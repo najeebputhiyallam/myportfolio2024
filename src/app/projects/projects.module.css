@@ -1,0 +1,21 @@
+
+.containerWrapperGlobal {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projectContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    line-height: 28px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 640px){
+    .projectContent {
+        align-items: center;
+    }
+}

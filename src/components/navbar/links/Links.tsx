@@ -57,7 +57,7 @@ export default function Links(){
 
             <div className={styles.mobileNav}>
                  { navbarOpen ? (
-                    <div className={styles.mobileBtn} onClick={() => setNavbarOpen(prevState => !prevState)} >X</div>
+                    <div className={`${styles.mobileBtn} ${styles.mobileBtnFixed}`} onClick={() => setNavbarOpen(prevState => !prevState)} >X</div>
                  ) : (
                     <div className={styles.mobileBtn} onClick={() => setNavbarOpen(prevState => !prevState)} >MENU</div>       
                  )}   
