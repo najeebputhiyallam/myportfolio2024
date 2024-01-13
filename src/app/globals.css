@@ -87,5 +87,5 @@ textarea {
     background: linear-gradient(to left, var(--gradientStart) 0%, var(--gradientEnd) 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;   
+    -webkit-text-fill-color: transparent;  
 }

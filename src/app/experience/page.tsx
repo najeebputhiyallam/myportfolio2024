@@ -10,7 +10,7 @@ export default function ExperiencePage(){
     return(
         <div className="containerGlobal" > 
             <div className={`${styles.containerWrapperGlobal} containerWrapperGlobal`} >
-                <h1 className={`${styles.gradientText} gradientText`} >/ Experience</h1>
+                <h1 className="gradientText" >/ Experience</h1>
 
                 <div className={styles.experienceContent} >
                     <div className={styles.expBox}>

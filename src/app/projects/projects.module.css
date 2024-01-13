@@ -2,6 +2,7 @@
 .containerWrapperGlobal {
     flex-direction: column;
     gap: 20px;
+    align-items: flex-start;
 }
 
 .projectContent {
@@ -12,6 +13,7 @@
     line-height: 28px;
     font-weight: 300;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 @media (max-width: 640px){

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import ContactForm from '@/components/contact-form/ContactForm';
+import styles from './contact.module.css'
 
 
 export const metadata: Metadata = {
@@ -9,9 +10,12 @@ export const metadata: Metadata = {
 export default function ContactPage(){
     return(
         <div className="containerGlobal" > 
-            <div className="containerWrapperGlobal" >
+            <div className={`${styles.containerWrapperGlobal} containerWrapperGlobal`} >
+                <h1 className="gradientText" >/ Contact</h1>
 
-                <ContactForm />
+                <div className={styles.contactContent} >
+                    <ContactForm />
+                </div>    
             
             </div>
         </div>

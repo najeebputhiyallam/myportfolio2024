@@ -16,7 +16,7 @@ export default function ContactForm(){
         <form className={styles.form} ref={ref} onSubmit={()=>submitBtnClicked(true)} action={async FormData => { submitBtnClicked(true); await submitForm(FormData); ref.current?.reset(); }} >
             <div className="containerGlobal" > 
                 <div className={` ${styles.containerWrapper} containerWrapperGlobal`} >
-                    <h1 className="gradientText" >/ Contact</h1>
+                    
 
                     <div className={styles.formDiv}>
                         <label htmlFor="name" >Name</label>
