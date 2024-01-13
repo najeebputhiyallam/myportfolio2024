@@ -88,7 +88,14 @@
         z-index: 10;
 
         border-left: 1px solid var(--linkHoverColor);
+
+        transition: left 500ms, opacity 500ms;
+        opacity: 1;
      }
+        .mobileDrawerClose {
+            left: 101%;
+            opacity: 0;
+        }   
 
      .mobileDrawer a {
         padding: 20px;

@@ -61,7 +61,24 @@ export default function Links(){
                  ) : (
                     <div className={styles.mobileBtn} onClick={() => setNavbarOpen(prevState => !prevState)} >MENU</div>       
                  )}   
+
+
+
+                <div className={navbarOpen ? `${styles.mobileDrawer}` : `${styles.mobileDrawer} ${styles.mobileDrawerClose}` }>
+                    {links.map((link=>{
+                        let isActive = false;
+                        if ( link.path.length > 1 ) {
+                            isActive = pathname.startsWith(link.path);
+                        } else if ( pathname.length === 1 && pathname === '/' ) {
+                            isActive = true;
+                        }                        
+                        return (
+                        <Link className={isActive ? styles.linkActive : ""} href={link.path} key={link.title}>{link.title}</Link>
+                        )}
+                    ))}
+                </div>  
                 
+                {/*
                 { navbarOpen ? (                                    
                     <div className={styles.mobileDrawer}>
                     {links.map((link=>{
@@ -79,7 +96,8 @@ export default function Links(){
                 ) : (
                     undefined
                 ) }
-  
+                */}
+
             </div>            
         </div>      
     );
