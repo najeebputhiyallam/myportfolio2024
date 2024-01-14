@@ -3,6 +3,9 @@ import styles from './projects.module.css'
 import Button from "@/components/button/Button";
 import Image from "next/image";
 import Link from "next/link";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
+import { UrlObject } from "url";
 
 export const metadata: Metadata = {
     title: "Projects",
@@ -36,7 +39,7 @@ export default async function ProjectsPage(){
                     <div className={styles.projectBoxHolder} >
                         
                             { 
-                                data.map( (project) => (
+                                data.map( (project: { id: Key; img: string; title: string; url: string; }) => (
                                     <div key={project.id} className={styles.projectBox} >
                                         <div className={styles.projectBoxWrapper} >
                                             <Image src={project.img} alt="" fill style={{objectFit: "contain", borderRadius: "0" }} />
