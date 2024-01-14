@@ -16,8 +16,52 @@
     width: 100%;
 }
 
+.projectBoxHolder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+.projectBox {
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.projectBoxWrapper {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--text);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.projectBoxWrapper img { 
+    position: relative !important; 
+    display: block;
+    margin-bottom: 10px;
+}
+
+.projectBoxWrapper p {
+    color: var(--bg);
+    font-weight: 700;
+}
+
+.projectBoxWrapper p a {
+    font-weight: 500;
+}
+
 @media (max-width: 640px){
     .projectContent {
         align-items: center;
+    }
+
+    .projectBox {
+        width: 100%;
     }
 }
