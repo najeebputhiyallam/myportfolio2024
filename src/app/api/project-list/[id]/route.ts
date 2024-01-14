@@ -1,4 +1,4 @@
-import { projects } from "@/app/api/projects/data";
+import { projects } from "@/app/api/project-list/data";
 
 //Get a specific project
 export async function GET( 
