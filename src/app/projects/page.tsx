@@ -36,7 +36,7 @@ export default async function ProjectsPage(){
                     <div className={styles.projectBoxHolder} >
                         
                             { 
-                                data.map( (project: { id: string; img: string; title: string; url: string; }) => (
+                                data.map( (project: { id: string; img: string; url: string; title: string; }) => (
                                     <div key={project.id} className={styles.projectBox} >
                                         <div className={styles.projectBoxWrapper} >
                                             <Image src={project.img} alt="" fill style={{objectFit: "contain", borderRadius: "0" }} />
