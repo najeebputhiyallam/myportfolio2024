@@ -9,7 +9,8 @@ export const metadata: Metadata = {
 }
 
 async function getData() {
-    const res = await fetch(`${process.env.SITEBASEURL}api/projects`)
+    const res = await fetch(`${process.env.SITEBASEURL}api/project-list`, { method: 'GET' });
+    //const res = await fetch(`${process.env.SITEBASEURL}api/projects`)
     //const res = await fetch("https://next.najeebdigital.xyz/api/projects")
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
