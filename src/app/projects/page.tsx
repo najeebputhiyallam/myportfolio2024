@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 }
 
 async function getData() {
-    'use server'
     const res = await fetch(`${process.env.SITEBASEURL}api/projects`)
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
