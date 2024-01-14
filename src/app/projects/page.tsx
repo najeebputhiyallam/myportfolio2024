@@ -9,14 +9,14 @@ export const metadata: Metadata = {
 }
 
 async function getData() {
-    //const res = await fetch(`${process.env.SITEBASEURL}api/projects`)
-    const res = await fetch("https://next.najeebdigital.xyz/api/projects")
+    const res = await fetch(`${process.env.SITEBASEURL}api/projects`)
+    //const res = await fetch("https://next.najeebdigital.xyz/api/projects")
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
 
     if (!res.ok) {
       // This will activate the closest `error.js` Error Boundary
-      throw new Error('Failed to fetch data')
+      throw new Error('Failed to fetch data - Something wrong this page')
     }
    
     return res.json()
